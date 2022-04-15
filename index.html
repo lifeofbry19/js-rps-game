@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function computerPlay() { 
+            let randomPlay = Math.floor(Math.random() * 3);
+            if (randomPlay === 0) {
+                return 'Rock'
+            } else if (randomPlay === 1) {
+                return 'Paper'
+            } else {
+                return 'Scissors'
+            };
+            
+        }
+
+        // let playerSelection = parseInt(prompt("make your move: "));
+        // playerSelection.toLowerCase();
+        const compMove = computerPlay();
+        
+        function playRound(playerSelection, compMove) {
+            if (playerSelection === 'rock') {
+                if (compMove === 'Rock') {
+                    return 'Tie! You both chose Rock.'
+                } else if (compMove === 'Paper') {
+                    return 'You lose! Paper beats Rock'
+                } else {
+                    return 'You win! Rock beats Scissors'
+                }
+
+            } else if (playerSelection === 'paper') {
+                if (compMove === 'Rock') {
+                    return 'You win! Paper beats Rock'
+                } else if (compMove === 'Paper') {
+                    return 'Tie! You both chose Paper'
+                } else {
+                    return 'You lose! Scissors beats Paper'
+                }
+            } else {
+                if (compMove === 'Rock') {
+                    return 'You lose! Scissors beats Rock'
+                } else if (compMove === 'Paper') {
+                    return 'You win! Scissors beats Paper'
+                } else {
+                    return 'Tie! You both chose Scissors!'
+                }
+            }
+
+        }
+
+        function game(playerSelection, compMove) {
+            playerCounter = 0
+            compCounter = 0
+            for (let i = 0; i < 5; i++) {
+                round = playRound(playerSelection, compMove);
+                if (round[4] === 'w') {
+                    playerCounter += 1;
+                    console.log(`You won that one. Score is now: 
+                      Player: ${playerCounter}, Computer: ${compCounter}`)
+                } else if (round[4] === 'l') {
+                    compCounter += 1;
+                    console.log(`You lost that one. Score is now: 
+                      Player: ${playerCounter}, Computer: ${compCounter}`)
+                } else {
+                    console.log(`You tied on that one. Score is: 
+                      Player: ${playerCounter}, Computer: ${compCounter}`)
+                }
+            }
+            if (playerCounter > compCounter) {
+                console.log('Congrats, you win!')
+            } else if (compCounter > playerCounter) {
+                console.log('You lost. Computer wins.')
+            } else {
+                console.log("It's a tie! Nobody wins.")
+            }
+        }
+       
+        game();
+       
+
+
+        
+
+    </script>
+</body>
+</html>
