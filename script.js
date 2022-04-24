@@ -90,7 +90,7 @@ rockBtn.addEventListener('click', () => {
         }
    
     } else {
-        resultsText.textContent += ' Tie! No score change.'
+        resultsText.textContent += ' No score change.'
         scoreText.textContent = `You: ${playerCounter} Computer: ${computerCounter}`
     }
 });
@@ -119,7 +119,7 @@ paperBtn.addEventListener('click', () => {
         }
    
     } else {
-        resultsText.textContent += 'Tie! No score change.'
+        resultsText.textContent += ' No score change.'
         scoreText.textContent = `You: ${playerCounter} Computer: ${computerCounter}`
     }
 });
@@ -148,7 +148,7 @@ scissorsBtn.addEventListener('click', () => {
         }
    
     } else {
-        resultsText.textContent += 'Tie! No score change.'
+        resultsText.textContent += ' No score change.'
     }
 });
 
