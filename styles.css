@@ -1,42 +1,90 @@
 .intro-text {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    border: 4px solid red;
+    border: 4px solid white;
     height: 300px;
+    padding: 25px;
+    color: white;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-left: 70px;
+    margin-right: 70px;
+    border-radius: 8px;
+    background-color: rgb(16, 9, 44);
+    opacity: 0.8;
+}
+.intro-text>:first-child{
+    font-size: x-large;
+    color: white
+}
+.intro-text>:nth-child(2){
+    font-size: x-large;
+    color: white;
 }
 
 .results-text {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 4px solid red;
+    border: 4px solid white;
     height: 200px;
     margin: 50px;
+    margin-left: 90px;
+    margin-right: 90px;
+    padding: 30px;
+    font-size: x-large;
+    color: white;
+    background-color: rgb(16, 9, 44);
+    opacity: 0.8;
+    border-radius: 8px;
 }
-
+.score-text {
+    color: white;
+    font-size: larger;
+    border: 4px solid white;
+    width: 100px;
+    padding: 5px;
+    border-radius: 8px;
+}
 .buttons {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    border: 4px solid red;
     padding: 20px;
     
+    
+
+    
 }
+
 
 .buttons>:first-child {
     height: 100px;
     width: 100px;
     border-radius: 8px;
+    border: 2px solid white;
+    background-color: rgb(16, 9, 44);
+    color: white;
 }
 .buttons>:nth-child(2) {
     height: 100px;
     width: 100px;
     border-radius: 8px;
+    border: 2px solid white;
+    background-color: rgb(16, 9, 44);
+    color: white;
 }
 .buttons>:nth-child(3) {
     height: 100px;
     width: 100px;
     border-radius: 8px;
+    border: 2px solid white;
+    background-color: rgb(16, 9, 44);
+    color: white;
 }
 
+body {
+    background-image: url(pexels-philippe-donn-1257860.jpg);
+    background-size: cover;
+}
