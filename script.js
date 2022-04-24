@@ -61,14 +61,85 @@ function playRound(playerSelection, compMove) {
 }
 //let compMove = computerPlay()
 let playerSelection = ''
+let playerCounter = 0
+let computerCounter = 0
 rockBtn.addEventListener('click', () => {
     resultsText.textContent = playRound('ROCK', computerPlay());
+    console.log(resultsText.textContent[4])
+    if (resultsText.textContent[4] === 'w') {
+        playerCounter += 1;
+        if (playerCounter === 5) {
+            resultsText.textContent = 'You win! Select an option (rock, paper or scissors) to play again.'
+            computerCounter = 0
+            playerCounter = 0
+        } else {
+           resultsText.textContent += `player score: ${playerCounter}`
+        }
+    } else if (resultsText.textContent[4] === 'l') {
+        computerCounter += 1;
+        if (computerCounter === 5) {
+            resultsText.textContent = 'You lose. Select an option (rock, paper or scissors) to play again.'
+            computerCounter = 0
+            playerCounter = 0
+        } else {
+            resultsText.textContent += `computer score: ${computerCounter}`;
+        }
+   
+    } else {
+        resultsText.textContent += 'tie! no score change'
+    }
 });
 paperBtn.addEventListener('click', () => {
     resultsText.textContent = playRound('PAPER', computerPlay());
+    console.log(resultsText.textContent[4])
+    if (resultsText.textContent[4] === 'w') {
+        playerCounter += 1;
+        if (playerCounter === 5) {
+            resultsText.textContent = 'You win! Select an option (rock, paper or scissors) to play again.'
+            computerCounter = 0
+            playerCounter = 0
+        } else {
+           resultsText.textContent += `player score: ${playerCounter}`
+        }
+    } else if (resultsText.textContent[4] === 'l') {
+        computerCounter += 1;
+        if (computerCounter === 5) {
+            resultsText.textContent = 'You lose. Select an option (rock, paper or scissors) to play again.'
+            computerCounter = 0
+            playerCounter = 0
+        } else {
+            resultsText.textContent += `computer score: ${computerCounter}`;
+        }
+   
+    } else {
+        resultsText.textContent += 'tie! no score change'
+    }
 });
 scissorsBtn.addEventListener('click', () => {
     resultsText.textContent = playRound('SCISSORS', computerPlay());
+    console.log(resultsText.textContent[4])
+    if (resultsText.textContent[4] === 'w') {
+        playerCounter += 1;
+        if (playerCounter === 5) {
+            resultsText.textContent = 'You win! Select an option (rock, paper or scissors) to play again.'
+            computerCounter = 0
+            playerCounter = 0
+        } else {
+           resultsText.textContent += `player score: ${playerCounter}`
+        }
+    } else if (resultsText.textContent[4] === 'l') {
+        computerCounter += 1;
+        if (computerCounter === 5) {
+            resultsText.textContent = 'You lose. Select an option (rock, paper or scissors) to play again.'
+            computerCounter = 0
+            playerCounter = 0
+        } else {
+            resultsText.textContent += `computer score: ${computerCounter}`;
+        }
+   
+    } else {
+        resultsText.textContent += 'tie! no score change'
+    }
 });
 
 
